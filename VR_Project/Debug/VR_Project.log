@@ -1,0 +1,4 @@
+﻿  Game.cpp
+c:\users\c00205464\downloads\pseudovr\vr_project\src\game.cpp(3): warning C4244: 'initializing': conversion from 'double' to 'sf::Int32', possible loss of data
+  VR_Project.vcxproj -> C:\Users\C00205464\Downloads\PseudoVR\VR_Project\Debug\VR_Project.exe
+  VR_Project.vcxproj -> C:\Users\C00205464\Downloads\PseudoVR\VR_Project\Debug\VR_Project.pdb (Partial PDB)
