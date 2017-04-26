@@ -1,17 +1,10 @@
-#include "Game.h"
+#include <include/Game.h>
 
-/// /// <summary>
-/// @brief Main application entry point.
-/// 
-/// 
-/// </summary>
-/// <param name="argc">number of argument parameters</param>
-/// <param name="argv">c-style string array of executable parameters</param>
-/// <returns>exit code, 0 for success</returns>
-int main(int argc, char* agrv[])
+int main(void)
 {
-	Game& game = Game();
-	game.init();
+	sf::ContextSettings settings;
+	settings.depthBits = 24u;
+	settings.antialiasingLevel = 4u;
+	Game& game = Game(settings);
 	game.run();
-	return EXIT_SUCCESS;
 }

@@ -1,4 +1,4 @@
-﻿  Game.cpp
-c:\users\c00205464\downloads\pseudovr\vr_project\src\game.cpp(3): warning C4244: 'initializing': conversion from 'double' to 'sf::Int32', possible loss of data
-  VR_Project.vcxproj -> C:\Users\C00205464\Downloads\PseudoVR\VR_Project\Debug\VR_Project.exe
-  VR_Project.vcxproj -> C:\Users\C00205464\Downloads\PseudoVR\VR_Project\Debug\VR_Project.pdb (Partial PDB)
+﻿C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V140\Microsoft.CppBuild.targets(936,5): warning MSB8027: Two or more files with the name of Matrix3.cpp will produce outputs to the same location. This can lead to an incorrect build result.  The files involved are include\Matrix3.cpp, src\Matrix3.cpp.
+  Head.cpp
+  VR_Project.vcxproj -> D:\GitHub\PseudoVR\VR_Project\Debug\VR_Project.exe
+  VR_Project.vcxproj -> D:\GitHub\PseudoVR\VR_Project\Debug\VR_Project.pdb (Partial PDB)

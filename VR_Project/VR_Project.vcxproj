@@ -18,6 +18,28 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="include\Matrix3.cpp" />
+    <ClCompile Include="src\Cube.cpp" />
+    <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\Head.cpp" />
+    <ClCompile Include="src\Main.cpp" />
+    <ClCompile Include="src\Matrix3.cpp" />
+    <ClCompile Include="src\ProgramIds.cpp" />
+    <ClCompile Include="src\stb_image.c" />
+    <ClCompile Include="src\Vector3.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\Cube.h" />
+    <ClInclude Include="include\Debug.h" />
+    <ClInclude Include="include\Game.h" />
+    <ClInclude Include="include\Head.h" />
+    <ClInclude Include="include\Matrix3.h" />
+    <ClInclude Include="include\ProgramIds.h" />
+    <ClInclude Include="include\stb_image.h" />
+    <ClInclude Include="include\Vector3.h" />
+    <ClInclude Include="src\Matrix3.h" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{8D4706E5-F5E5-4C21-9770-2A0557BCBF36}</ProjectGuid>
     <RootNamespace>VR_Project</RootNamespace>
@@ -69,8 +91,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>$(IncludePath)</IncludePath>
-    <LibraryPath>$(LibraryPath)</LibraryPath>
+    <IncludePath>$(GLEW_SDK)/include;$(GLM_SDK);$(ProjectDir);$(GLEW_SDK)/include;$(GLM_SDK);$(SFML_SDK)/include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(GLEW_SDK)\lib\Release\Win32;$(SFML_SDK)/lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <IncludePath>$(IncludePath)</IncludePath>
@@ -80,11 +102,11 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>.\include;$(SFML_SDK)\include;$(GLEW_SDK)/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <SDLCheck>false</SDLCheck>
+      <AdditionalIncludeDirectories>../include;$(GLEW_SDK)/include;$(GLM_SDK);$(ProjectDir);$(SFML_SDK)/include;$(IncludePath)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>sfml-main-d.lib;sfml-audio-d.lib;sfml-graphics-d.lib;sfml-network-d.lib;sfml-system-d.lib;sfml-window-d.lib;OpenGL32.lib;GlU32.lib;glew32.lib;glew32s.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>glew32.lib;glew32s.lib;sfml-graphics-d.lib;sfml-audio-d.lib;sfml-system-d.lib;sfml-window-d.lib;sfml-network-d.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>$(GLEW_SDK)/lib/Release/Win32;$(SFML_SDK)/lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
@@ -124,13 +146,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClCompile Include="src\Game.cpp" />
-    <ClCompile Include="src\main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="include\Game.h" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
