@@ -268,12 +268,25 @@ void Game::update(double dt)
 		m_player.update(dt);
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left))
 		{
-			m_head.m_leftCamera = glm::rotate(m_head.m_leftCamera, -0.5f, glm::vec3(0, 1, 0));
+			m_head.m_leftCamera = glm::rotate(m_head.m_leftCamera, -0.01f, glm::vec3(0, 1, 0));
+			m_head.m_rightCamera = glm::rotate(m_head.m_rightCamera, -0.01f, glm::vec3(0, 1, 0));
 		}
 		//move right
 		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 		{
-			m_head.m_leftCamera = glm::rotate(m_head.m_leftCamera, 0.5f, glm::vec3(0, 1, 0));
+			m_head.m_leftCamera = glm::rotate(m_head.m_leftCamera, 0.01f, glm::vec3(0, 1, 0));
+			m_head.m_rightCamera = glm::rotate(m_head.m_rightCamera, 0.01f, glm::vec3(0, 1, 0));
+		}
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up))
+		{
+			m_head.m_leftCamera = glm::rotate(m_head.m_leftCamera, -0.01f, glm::vec3(1, 0, 0));
+			m_head.m_rightCamera = glm::rotate(m_head.m_rightCamera, -0.01f, glm::vec3(1, 0, 0));
+		}
+		//move right
+		if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+		{
+			m_head.m_leftCamera = glm::rotate(m_head.m_leftCamera, 0.01f, glm::vec3(1, 0, 0));
+			m_head.m_rightCamera = glm::rotate(m_head.m_rightCamera, 0.01f, glm::vec3(1, 0, 0));
 		}
 		break;
 	case GameState::Gameover:

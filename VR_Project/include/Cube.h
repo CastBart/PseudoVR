@@ -80,6 +80,7 @@ public:
 	Vector3 m_centrePoint;
 	const glm::mat4& m_leftView;
 	const glm::mat4& m_rightView;
+
 	glm::mat4 model, projection, mvp;
 	bool m_isPlayer;
 	float m_offsetZ;

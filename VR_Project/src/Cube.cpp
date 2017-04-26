@@ -160,7 +160,7 @@ Cube::Cube(const glm::mat4& camera, const glm::mat4&rightCamera, bool player, in
 	m_isPlayer(player)
 	, m_leftView(camera)
 	, m_rightView(rightCamera)
-	, m_offsetZ(offsetZ)
+	, m_offsetZ()
 
 {
 	srand(time(NULL));
@@ -234,7 +234,7 @@ void Cube::initialize()
 	);
 
 	
-	
+	model = glm::translate(model, glm::vec3(0, 0, -10));
 	
 }
 
